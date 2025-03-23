@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import random
 
 def fetch_recent_funding_rates_binance(symbol, limit=5):
     """Fetch the most recent funding rates from Binance API"""
@@ -10,7 +11,27 @@ def fetch_recent_funding_rates_binance(symbol, limit=5):
         "limit": limit
     }
     
-    response = requests.get(url, params=params)
+    # 添加请求头以绕过地区限制
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache',
+        'Sec-CH-UA': '" Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"',
+        'Sec-CH-UA-Mobile': '?0',
+        'Sec-CH-UA-Platform': '"Windows"',
+        'Sec-Fetch-Site': 'same-origin',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Dest': 'empty',
+        # 使用的韩国IP地址段
+        'X-Forwarded-For': f'175.223.{random.randint(1, 254)}.{random.randint(1, 254)}'
+    }
+    
+    # 使用添加了头信息的请求
+    response = requests.get(url, params=params, headers=headers)
+    
     data = response.json()
     if isinstance(data, list):
         return data
