@@ -21,9 +21,8 @@ h1 {
     color: #3f51b5;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 5px;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,6 +33,15 @@ h1 {
 h1 .material-icons {
     margin-right: 10px;
     font-size: 32px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #3f51b5;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-family: 'Lexend Deca', 'Roboto', sans-serif;
 }
 
 main {
@@ -295,11 +303,25 @@ footer {
 
 .form-row {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .form-row .form-group {
     flex: 1;
     min-width: 0;
     /* Allow flex items to shrink below content size */
+}
+
+/* Exchange logo styling */
+.exchange-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.exchange-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    object-fit: contain;
 }

@@ -16,6 +16,7 @@
     <div class="container">
         <header>
             <h1><span class="material-icons">calculate</span> Perps Funding Fee Calculator</h1>
+            <p class="subtitle">Funding rate data source: Binance and Bitget</p>
         </header>
 
         <main>
@@ -39,14 +40,14 @@
                         <label for="positionValue">Position Value (USDT):</label>
                         <input type="number" id="positionValue" step="0.01" min="0" required>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="positionDirection">Position Direction:</label>
-                    <select id="positionDirection" required>
-                        <option value="long">Long</option>
-                        <option value="short">Short</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="positionDirection">Position Direction:</label>
+                        <select id="positionDirection" required>
+                            <option value="long">Long</option>
+                            <option value="short">Short</option>
+                        </select>
+                    </div>
                 </div>
 
                 <button type="submit"><span class="material-icons">search</span> Calculate</button>

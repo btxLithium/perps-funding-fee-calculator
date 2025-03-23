@@ -119,14 +119,14 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
 
         // Format highest and lowest fees with timestamps
         const formattedBinanceHighest = binanceHighestFee !== null ?
-            `${formatFee(binanceHighestFee)} (${formatDatetime(binanceHighestFeeTime)})` : 'N/A';
+            `${formatFee(binanceHighestFee)}<br>(${new Date(binanceHighestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
         const formattedBinanceLowest = binanceLowestFee !== null ?
-            `${formatFee(binanceLowestFee)} (${formatDatetime(binanceLowestFeeTime)})` : 'N/A';
+            `${formatFee(binanceLowestFee)}<br>(${new Date(binanceLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
 
         const formattedBitgetHighest = bitgetHighestFee !== null ?
-            `${formatFee(bitgetHighestFee)} (${formatDatetime(bitgetHighestFeeTime)})` : 'N/A';
+            `${formatFee(bitgetHighestFee)}<br>(${new Date(bitgetHighestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
         const formattedBitgetLowest = bitgetLowestFee !== null ?
-            `${formatFee(bitgetLowestFee)} (${formatDatetime(bitgetLowestFeeTime)})` : 'N/A';
+            `${formatFee(bitgetLowestFee)}<br>(${new Date(bitgetLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
 
         // Success result with table styling
         resultElement.innerHTML = `
@@ -150,14 +150,14 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Binance</td>
+                                <td><span class="exchange-logo"><img src="assets/binance-icon-logo.png" alt="Binance" class="exchange-icon"> Binance</span></td>
                                 <td>${binanceRateCount}</td>
                                 <td class="fee-amount">${formattedBinanceFee}</td>
                                 <td class="fee-amount">${formattedBinanceHighest}</td>
                                 <td class="fee-amount">${formattedBinanceLowest}</td>
                             </tr>
                             <tr>
-                                <td>Bitget</td>
+                                <td><span class="exchange-logo"><img src="assets/bitget-icon-logo.png" alt="Bitget" class="exchange-icon"> Bitget</span></td>
                                 <td>${bitgetRateCount}</td>
                                 <td class="fee-amount">${formattedBitgetFee}</td>
                                 <td class="fee-amount">${formattedBitgetHighest}</td>
@@ -193,22 +193,10 @@ function formatDate(date) {
     });
 }
 
-// Helper function to format datetime
-function formatDatetime(date) {
-    return date.toLocaleString('en-US', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-    });
-}
-
 // Helper function to format fee with sign
 function formatFee(value) {
     const sign = value >= 0 ? '+' : '';
-    return `${sign}${value.toFixed(8)}`;
+    return `${sign}${Number(value.toFixed(5)).toString()}`;
 }
 
 // Toast message function
