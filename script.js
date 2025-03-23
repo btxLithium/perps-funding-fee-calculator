@@ -14,12 +14,19 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         return;
     }
 
+    const startDate = new Date(startDateInput);
+    // 检查日期是否为当前日期或未来日期
+    const today = new Date();
+
+    if (startDate >= today) {
+        showToast("Start date cannot be today or a future date. Please select a past date.");
+        return;
+    }
+
     // Show loading state
     submitButton.innerHTML = '<span class="material-icons spin">refresh</span> Calculating...';
     submitButton.disabled = true;
     resultElement.innerHTML = '<div class="loading"><span class="material-icons spin">refresh</span> Loading data...</div>';
-
-    const startDate = new Date(startDateInput);
 
     // Get both data files based on selected cryptocurrency
     const binanceDataUrl = `data/${cryptocurrency.toLowerCase()}_funding_rates_binance.json`;
@@ -128,6 +135,15 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         const formattedBitgetLowest = bitgetLowestFee !== null ?
             `${formatFee(bitgetLowestFee)}<br>(${new Date(bitgetLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
 
+        // Get CSS classes based on fee values
+        const binanceTotalFeeClass = binanceTotalFee >= 0 ? 'fee-positive' : 'fee-negative';
+        const binanceHighestFeeClass = binanceHighestFee >= 0 ? 'fee-positive' : 'fee-negative';
+        const binanceLowestFeeClass = binanceLowestFee >= 0 ? 'fee-positive' : 'fee-negative';
+
+        const bitgetTotalFeeClass = bitgetTotalFee >= 0 ? 'fee-positive' : 'fee-negative';
+        const bitgetHighestFeeClass = bitgetHighestFee >= 0 ? 'fee-positive' : 'fee-negative';
+        const bitgetLowestFeeClass = bitgetLowestFee >= 0 ? 'fee-positive' : 'fee-negative';
+
         // Success result with table styling
         resultElement.innerHTML = `
             <div class="result-card">
@@ -152,16 +168,16 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/binance-icon-logo.png" alt="Binance" class="exchange-icon"> Binance</span></td>
                                 <td>${binanceRateCount}</td>
-                                <td class="fee-amount">${formattedBinanceFee}</td>
-                                <td class="fee-amount">${formattedBinanceHighest}</td>
-                                <td class="fee-amount">${formattedBinanceLowest}</td>
+                                <td class="fee-amount ${binanceTotalFeeClass}">${formattedBinanceFee}</td>
+                                <td class="fee-amount ${binanceHighestFeeClass}">${formattedBinanceHighest}</td>
+                                <td class="fee-amount ${binanceLowestFeeClass}">${formattedBinanceLowest}</td>
                             </tr>
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/bitget-icon-logo.png" alt="Bitget" class="exchange-icon"> Bitget</span></td>
                                 <td>${bitgetRateCount}</td>
-                                <td class="fee-amount">${formattedBitgetFee}</td>
-                                <td class="fee-amount">${formattedBitgetHighest}</td>
-                                <td class="fee-amount">${formattedBitgetLowest}</td>
+                                <td class="fee-amount ${bitgetTotalFeeClass}">${formattedBitgetFee}</td>
+                                <td class="fee-amount ${bitgetHighestFeeClass}">${formattedBitgetHighest}</td>
+                                <td class="fee-amount ${bitgetLowestFeeClass}">${formattedBitgetLowest}</td>
                             </tr>
                         </tbody>
                     </table>
