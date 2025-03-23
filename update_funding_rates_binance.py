@@ -17,27 +17,13 @@ def fetch_recent_funding_rates_binance(symbol, limit=5):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Cache-Control': 'no-cache',
-        'Pragma': 'no-cache',
         # 使用韩国IP地址段
         'X-Forwarded-For': f'175.223.{random.randint(1, 254)}.{random.randint(1, 254)}'
     }
     
-    # 检查环境变量中是否有代理设置
-    proxy_url = os.environ.get('PROXY_URL')
-    proxies = None
-    
-    if proxy_url:
-        proxies = {
-            'http': proxy_url,
-            'https': proxy_url
-        }
-        print(f"Using proxy from environment variable")
-    
     # 使用添加了头信息的请求
     try:
-        response = requests.get(url, params=params, headers=headers, proxies=proxies, timeout=30)
+        response = requests.get(url, params=params, headers=headers, timeout=10)
         print(f"Status Code: {response.status_code}")
         
         data = response.json()
@@ -97,11 +83,6 @@ if __name__ == "__main__":
         "BTC": "BTCUSDT",
         "ETH": "ETHUSDT",
         "LTC": "LTCUSDT",
-        "BNB": "BNBUSDT",
-        "SOL": "SOLUSDT", 
-        "XRP": "XRPUSDT",
-        "DOGE": "DOGEUSDT",
-        "ADA": "ADAUSDT"
     }
     
     success_count = 0
@@ -124,6 +105,5 @@ if __name__ == "__main__":
     
     if success_count == 0:
         print("\nTROUBLESHOOTING:")
-        print("1. You might be in a region where access to Binance API is restricted")
-        print("2. Try running the script using a VPN")
+        print("You might be in a region where access to Binance API is restricted")
         sys.exit(1)

@@ -23,15 +23,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
-          pip install PySocks requests[socks]  # 添加代理支持
 
       - name: Update Bitget funding rates
         run: python update_funding_rates_bitget.py
 
       - name: Update Binance funding rates
         run: python update_funding_rates_binance.py
-        env:
-          PROXY_URL: ${{ secrets.PROXY_URL }}
 
       - name: Update last updated date in README
         run: |
