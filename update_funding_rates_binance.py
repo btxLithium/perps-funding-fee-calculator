@@ -30,7 +30,7 @@ def update_funding_rates(coin, symbol):
             existing_data = json.load(f)
     
     # Create a set of existing fundingRates for quick lookup
-    existing_rates = {item.get('fundingRate') + item.get('fundingTime'): True for item in existing_data}
+    existing_rates = {item.get('fundingRate') + str(item.get('fundingTime')): True for item in existing_data}
     
     # Fetch recent data from API
     recent_data = fetch_recent_funding_rates_binance(symbol)
@@ -41,7 +41,7 @@ def update_funding_rates(coin, symbol):
     # Add only new items to existing data
     for item in recent_data:
         # Create a unique key for each funding rate record
-        key = item.get('fundingRate') + item.get('fundingTime')
+        key = item.get('fundingRate') + str(item.get('fundingTime'))
         if key not in existing_rates:
             existing_data.append(item)
             existing_rates[key] = True

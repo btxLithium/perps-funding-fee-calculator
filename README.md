@@ -1,4 +1,4 @@
-# perps-funding-fee-calculator([link](https://btxlithium.github.io/perps-funding-fee-calculator/))
+# Perps Funding Fee Calculator([link](https://btxlithium.github.io/perps-funding-fee-calculator/))
  
 <img src="assets/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
@@ -6,6 +6,13 @@
 ## Project Description
 
 This web app is designed to help traders calculate their funding fee costs or income over a specified period on Bitget or Binance.
+
+## Automated Updates
+
+The funding rate data is automatically updated daily at 22:00 (UTC+8) using GitHub Actions. The workflow:
+1. Retrieves the latest funding rates from Binance and Bitget APIs
+2. Adds only new data to the existing JSON files
+3. Commits and pushes the changes back to the repository
 
 ## Structure
 
@@ -19,18 +26,12 @@ perps-funding-fee-calculator/
 ├ assets/                     
 ├ data/                       # Historical funding rate data
 └ .github/
-    └ workflows/              # GitHub Actions workflows
-        └ daily_funding_rates_update.yml  # Automated update workflow (runs daily at 22:00 UTC+8)
+  └ workflows/              # GitHub Actions workflows
+    └ daily_funding_rates_update.yml  # Automated update workflow (runs daily at 22:00 UTC+8)
 ```
 
 NOTE: `fetch_funding_rates_binance.py` and `fetch_funding_rates_bitget.py` are one-time scripts executed to fetch all historical funding rate data since February 18. 
 
-## Automated Updates
-
-The funding rate data is automatically updated daily at 22:00 (UTC+8) using GitHub Actions. The workflow:
-1. Retrieves the latest funding rates from Binance and Bitget APIs
-2. Adds only new data to the existing JSON files
-3. Commits and pushes the changes back to the repository
 
 
 ## Donations
