@@ -1,6 +1,6 @@
 # bitget-perps-funding-fee-calculator
  
-![Funding Fee Calculator Screenshot](assets/screenshot.png)
+<img src="assets/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
 
 ## Project Description
@@ -9,7 +9,19 @@ This simple web app is designed to help traders calculate their funding fee cost
 
 ## Structure
 
+- `index.html`, `style.css`, `script.js`: Frontend web application
+- `data/`: Contains historical funding rate data for different cryptocurrencies
+- `update_funding_rates_binance.py`: Script to update Binance funding rate data
+- `update_funding_rates_bitget.py`: Script to update Bitget funding rate data
 
+## Automated Updates
+
+The funding rate data is automatically updated daily at 22:00 (UTC+8) using GitHub Actions. The workflow:
+1. Retrieves the latest funding rates from Binance and Bitget APIs
+2. Adds only new data to the existing JSON files
+3. Commits and pushes the changes back to the repository
+
+You can also manually trigger the update workflow from the "Actions" tab in the GitHub repository.
 
 
 ## Donations

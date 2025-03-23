@@ -1,0 +1,40 @@
+name: Daily Funding Rates Update
+
+on:
+  schedule:
+    # Run at 14:00 UTC (22:00 UTC+8)
+    - cron: '0 14 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  update-funding-rates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Update Bitget funding rates
+        run: python update_funding_rates_bitget.py
+
+      - name: Update Binance funding rates
+        run: python update_funding_rates_binance.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git commit -m "Update funding rates data ($(date '+%Y-%m-%d'))" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
