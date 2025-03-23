@@ -69,7 +69,8 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         let binanceTotalFee = 0;
         let binanceRateCount = 0;
         binanceRates.forEach(item => {
-            const settleTime = new Date(parseInt(item.settleTime));
+            // Binance uses fundingTime instead of settleTime
+            const settleTime = new Date(parseInt(item.fundingTime));
             if (settleTime >= startDate) {
                 const rate = parseFloat(item.fundingRate);
                 // Apply direction multiplier to the rate
@@ -160,8 +161,8 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                                 <th>Exchange</th>
                                 <th>Settlement Count</th>
                                 <th>Total Funding Fee (USDT)</th>
-                                <th>Highest Single Fee (USDT)</th>
-                                <th>Lowest Single Fee (USDT)</th>
+                                <th>Highest Single Fee Income (USDT)</th>
+                                <th>Highest Single Fee Expense (USDT)</th>
                             </tr>
                         </thead>
                         <tbody>

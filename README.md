@@ -1,5 +1,6 @@
 # bitget-perps-funding-fee-calculator
  
+![Funding Fee Calculator Screenshot](assets/screenshot.png)
 
 
 ## Project Description
