@@ -136,14 +136,10 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         const formattedBitgetLowest = bitgetLowestFee !== null ?
             `${formatFee(bitgetLowestFee)}<br>(${new Date(bitgetLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
 
-        // Get CSS classes based on fee values
-        const binanceTotalFeeClass = binanceTotalFee >= 0 ? 'fee-positive' : 'fee-negative';
-        const binanceHighestFeeClass = binanceHighestFee >= 0 ? 'fee-positive' : 'fee-negative';
-        const binanceLowestFeeClass = binanceLowestFee >= 0 ? 'fee-positive' : 'fee-negative';
-
-        const bitgetTotalFeeClass = bitgetTotalFee >= 0 ? 'fee-positive' : 'fee-negative';
-        const bitgetHighestFeeClass = bitgetHighestFee >= 0 ? 'fee-positive' : 'fee-negative';
-        const bitgetLowestFeeClass = bitgetLowestFee >= 0 ? 'fee-positive' : 'fee-negative';
+        // Get CSS class based on fee value (simplified)
+        function getFeeClass(value) {
+            return value >= 0 ? 'fee-positive' : 'fee-negative';
+        }
 
         // Success result with table styling
         resultElement.innerHTML = `
@@ -169,16 +165,16 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/binance-icon-logo.png" alt="Binance" class="exchange-icon"> Binance</span></td>
                                 <td>${calculateDaysDifference(startDate)}</td>
-                                <td class="fee-amount ${binanceTotalFeeClass}">${formattedBinanceFee}</td>
-                                <td class="fee-amount ${binanceHighestFeeClass}">${formattedBinanceHighest}</td>
-                                <td class="fee-amount ${binanceLowestFeeClass}">${formattedBinanceLowest}</td>
+                                <td class="fee-amount ${getFeeClass(binanceTotalFee)}">${formattedBinanceFee}</td>
+                                <td class="fee-amount ${getFeeClass(binanceHighestFee)}">${formattedBinanceHighest}</td>
+                                <td class="fee-amount ${getFeeClass(binanceLowestFee)}">${formattedBinanceLowest}</td>
                             </tr>
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/bitget-icon-logo.png" alt="Bitget" class="exchange-icon"> Bitget</span></td>
                                 <td>${calculateDaysDifference(startDate)}</td>
-                                <td class="fee-amount ${bitgetTotalFeeClass}">${formattedBitgetFee}</td>
-                                <td class="fee-amount ${bitgetHighestFeeClass}">${formattedBitgetHighest}</td>
-                                <td class="fee-amount ${bitgetLowestFeeClass}">${formattedBitgetLowest}</td>
+                                <td class="fee-amount ${getFeeClass(bitgetTotalFee)}">${formattedBitgetFee}</td>
+                                <td class="fee-amount ${getFeeClass(bitgetHighestFee)}">${formattedBitgetHighest}</td>
+                                <td class="fee-amount ${getFeeClass(bitgetLowestFee)}">${formattedBitgetLowest}</td>
                             </tr>
                         </tbody>
                     </table>
