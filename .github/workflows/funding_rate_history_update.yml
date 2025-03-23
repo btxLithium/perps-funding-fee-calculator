@@ -23,7 +23,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
-          pip install urllib3==1.26.15  # 确保兼容性
           pip install PySocks requests[socks]  # 添加代理支持
 
       - name: Update Bitget funding rates
@@ -31,6 +30,8 @@ jobs:
 
       - name: Update Binance funding rates
         run: python update_funding_rates_binance.py
+        env:
+          PROXY_URL: ${{ secrets.PROXY_URL }}
 
       - name: Update last updated date in README
         run: |
