@@ -125,16 +125,22 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         const formattedBinanceFee = formatFee(binanceTotalFee);
         const formattedBitgetFee = formatFee(bitgetTotalFee);
 
+        // Helper function to format timestamp to UTC+8 time string
+        function formatTimestampToUTC8(timestamp) {
+            if (!timestamp) return 'N/A';
+            return new Date(timestamp.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16);
+        }
+
         // Format highest and lowest fees with timestamps
         const formattedBinanceHighest = binanceHighestFee !== null ?
-            `${formatFee(binanceHighestFee)}<br>(${new Date(binanceHighestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
+            `${formatFee(binanceHighestFee)}<br>(${formatTimestampToUTC8(binanceHighestFeeTime)})` : 'N/A';
         const formattedBinanceLowest = binanceLowestFee !== null ?
-            `${formatFee(binanceLowestFee)}<br>(${new Date(binanceLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
+            `${formatFee(binanceLowestFee)}<br>(${formatTimestampToUTC8(binanceLowestFeeTime)})` : 'N/A';
 
         const formattedBitgetHighest = bitgetHighestFee !== null ?
-            `${formatFee(bitgetHighestFee)}<br>(${new Date(bitgetHighestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
+            `${formatFee(bitgetHighestFee)}<br>(${formatTimestampToUTC8(bitgetHighestFeeTime)})` : 'N/A';
         const formattedBitgetLowest = bitgetLowestFee !== null ?
-            `${formatFee(bitgetLowestFee)}<br>(${new Date(bitgetLowestFeeTime.getTime() + 8 * 3600000).toISOString().replace('T', ' ').substring(0, 16)})` : 'N/A';
+            `${formatFee(bitgetLowestFee)}<br>(${formatTimestampToUTC8(bitgetLowestFeeTime)})` : 'N/A';
 
         // Get CSS class based on fee value (simplified)
         function getFeeClass(value) {
@@ -231,8 +237,7 @@ function showToast(message) {
     // Create new toast
     const toast = document.createElement('div');
     toast.className = 'toast';
-    toast.innerHTML = `
-        <span class="material-icons">info</span>
+    toast.innerHTML = `        <span class="material-icons">info</span>
         <span class="toast-message">${message}</span>
     `;
 
@@ -251,3 +256,4 @@ function showToast(message) {
         }, 300);
     }, 3000);
 }
+
