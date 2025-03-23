@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>资金费率计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>资金费率计算器</h1>
+    <form id="calcForm">
+        <label for="startDate">起始日期：</label>
+        <input type="date" id="startDate" required>
+        <label for="position">持仓数量（LTC）：</label>
+        <input type="number" id="position" step="0.01" required>
+        <button type="submit">计算</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
