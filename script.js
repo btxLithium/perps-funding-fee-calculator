@@ -4,6 +4,7 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
     const cryptocurrency = document.getElementById('cryptocurrency').value;
     const startDateInput = document.getElementById('startDate').value;
     const positionValue = parseFloat(document.getElementById('positionValue').value);
+    const positionDirection = document.getElementById('positionDirection').value;
     const resultElement = document.getElementById('result');
     const submitButton = this.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
@@ -41,16 +42,21 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         const binanceRates = await binanceResponse.json();
         const bitgetRates = await bitgetResponse.json();
 
-        // Initialize variables for highest and lowest rates
-        let binanceHighestRate = null;
-        let binanceHighestRateTime = null;
-        let binanceLowestRate = null;
-        let binanceLowestRateTime = null;
+        // Direction multiplier: long pays positive rates, short pays negative rates
+        // So for long positions, we use the rate as is
+        // For short positions, we invert the sign of the rate
+        const directionMultiplier = positionDirection === 'long' ? 1 : -1;
 
-        let bitgetHighestRate = null;
-        let bitgetHighestRateTime = null;
-        let bitgetLowestRate = null;
-        let bitgetLowestRateTime = null;
+        // Initialize variables for highest and lowest fees
+        let binanceHighestFee = null;
+        let binanceHighestFeeTime = null;
+        let binanceLowestFee = null;
+        let binanceLowestFeeTime = null;
+
+        let bitgetHighestFee = null;
+        let bitgetHighestFeeTime = null;
+        let bitgetLowestFee = null;
+        let bitgetLowestFeeTime = null;
 
         // Calculate for Binance
         let binanceTotalFee = 0;
@@ -59,19 +65,22 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
             const settleTime = new Date(parseInt(item.settleTime));
             if (settleTime >= startDate) {
                 const rate = parseFloat(item.fundingRate);
-                binanceTotalFee += positionValue * rate;
+                // Apply direction multiplier to the rate
+                const adjustedRate = rate * directionMultiplier;
+                const fee = positionValue * adjustedRate;
+                binanceTotalFee += fee;
                 binanceRateCount++;
 
-                // Track highest rate
-                if (binanceHighestRate === null || rate > binanceHighestRate) {
-                    binanceHighestRate = rate;
-                    binanceHighestRateTime = settleTime;
+                // Track highest fee
+                if (binanceHighestFee === null || fee > binanceHighestFee) {
+                    binanceHighestFee = fee;
+                    binanceHighestFeeTime = settleTime;
                 }
 
-                // Track lowest rate
-                if (binanceLowestRate === null || rate < binanceLowestRate) {
-                    binanceLowestRate = rate;
-                    binanceLowestRateTime = settleTime;
+                // Track lowest fee
+                if (binanceLowestFee === null || fee < binanceLowestFee) {
+                    binanceLowestFee = fee;
+                    binanceLowestFeeTime = settleTime;
                 }
             }
         });
@@ -83,19 +92,22 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
             const settleTime = new Date(parseInt(item.settleTime));
             if (settleTime >= startDate) {
                 const rate = parseFloat(item.fundingRate);
-                bitgetTotalFee += positionValue * rate;
+                // Apply direction multiplier to the rate
+                const adjustedRate = rate * directionMultiplier;
+                const fee = positionValue * adjustedRate;
+                bitgetTotalFee += fee;
                 bitgetRateCount++;
 
-                // Track highest rate
-                if (bitgetHighestRate === null || rate > bitgetHighestRate) {
-                    bitgetHighestRate = rate;
-                    bitgetHighestRateTime = settleTime;
+                // Track highest fee
+                if (bitgetHighestFee === null || fee > bitgetHighestFee) {
+                    bitgetHighestFee = fee;
+                    bitgetHighestFeeTime = settleTime;
                 }
 
-                // Track lowest rate
-                if (bitgetLowestRate === null || rate < bitgetLowestRate) {
-                    bitgetLowestRate = rate;
-                    bitgetLowestRateTime = settleTime;
+                // Track lowest fee
+                if (bitgetLowestFee === null || fee < bitgetLowestFee) {
+                    bitgetLowestFee = fee;
+                    bitgetLowestFeeTime = settleTime;
                 }
             }
         });
@@ -105,16 +117,16 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         const formattedBinanceFee = formatFee(binanceTotalFee);
         const formattedBitgetFee = formatFee(bitgetTotalFee);
 
-        // Format highest and lowest rates with timestamps
-        const formattedBinanceHighest = binanceHighestRate !== null ?
-            `${formatFee(binanceHighestRate * 100)}% (${formatDatetime(binanceHighestRateTime)})` : 'N/A';
-        const formattedBinanceLowest = binanceLowestRate !== null ?
-            `${formatFee(binanceLowestRate * 100)}% (${formatDatetime(binanceLowestRateTime)})` : 'N/A';
+        // Format highest and lowest fees with timestamps
+        const formattedBinanceHighest = binanceHighestFee !== null ?
+            `${formatFee(binanceHighestFee)} (${formatDatetime(binanceHighestFeeTime)})` : 'N/A';
+        const formattedBinanceLowest = binanceLowestFee !== null ?
+            `${formatFee(binanceLowestFee)} (${formatDatetime(binanceLowestFeeTime)})` : 'N/A';
 
-        const formattedBitgetHighest = bitgetHighestRate !== null ?
-            `${formatFee(bitgetHighestRate * 100)}% (${formatDatetime(bitgetHighestRateTime)})` : 'N/A';
-        const formattedBitgetLowest = bitgetLowestRate !== null ?
-            `${formatFee(bitgetLowestRate * 100)}% (${formatDatetime(bitgetLowestRateTime)})` : 'N/A';
+        const formattedBitgetHighest = bitgetHighestFee !== null ?
+            `${formatFee(bitgetHighestFee)} (${formatDatetime(bitgetHighestFeeTime)})` : 'N/A';
+        const formattedBitgetLowest = bitgetLowestFee !== null ?
+            `${formatFee(bitgetLowestFee)} (${formatDatetime(bitgetLowestFeeTime)})` : 'N/A';
 
         // Success result with table styling
         resultElement.innerHTML = `
@@ -124,6 +136,7 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                     <p><strong>Start Date:</strong> ${formattedDate}</p>
                     <p><strong>Cryptocurrency:</strong> ${cryptocurrency}</p>
                     <p><strong>Position Value:</strong> ${positionValue} USDT</p>
+                    <p><strong>Position Direction:</strong> ${positionDirection.charAt(0).toUpperCase() + positionDirection.slice(1)}</p>
                     
                     <table class="result-table">
                         <thead>
@@ -131,8 +144,8 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                                 <th>Exchange</th>
                                 <th>Settlement Count</th>
                                 <th>Total Funding Fee (USDT)</th>
-                                <th>Highest Funding Rate</th>
-                                <th>Lowest Funding Rate</th>
+                                <th>Highest Single Fee (USDT)</th>
+                                <th>Lowest Single Fee (USDT)</th>
                             </tr>
                         </thead>
                         <tbody>
