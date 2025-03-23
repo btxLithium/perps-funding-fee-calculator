@@ -4,8 +4,7 @@ import os
 import random
 import sys
 
-def fetch_recent_funding_rates_binance(symbol, limit=5):
-    """获取币安最近的资金费率数据"""
+def fetch_recent_funding_rates_binance(symbol, limit=50):
     url = "https://fapi.binance.com/fapi/v1/fundingRate"
     params = {
         "symbol": symbol,
