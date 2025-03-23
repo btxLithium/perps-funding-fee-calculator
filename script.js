@@ -159,7 +159,7 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                         <thead>
                             <tr>
                                 <th>Exchange</th>
-                                <th>Settlement Count</th>
+                                <th>Days</th>
                                 <th>Total Funding Fee (USDT)</th>
                                 <th>Highest Single Fee Income (USDT)</th>
                                 <th>Highest Single Fee Expense (USDT)</th>
@@ -168,14 +168,14 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                         <tbody>
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/binance-icon-logo.png" alt="Binance" class="exchange-icon"> Binance</span></td>
-                                <td>${binanceRateCount}</td>
+                                <td>${calculateDaysDifference(startDate)}</td>
                                 <td class="fee-amount ${binanceTotalFeeClass}">${formattedBinanceFee}</td>
                                 <td class="fee-amount ${binanceHighestFeeClass}">${formattedBinanceHighest}</td>
                                 <td class="fee-amount ${binanceLowestFeeClass}">${formattedBinanceLowest}</td>
                             </tr>
                             <tr>
                                 <td><span class="exchange-logo"><img src="assets/bitget-icon-logo.png" alt="Bitget" class="exchange-icon"> Bitget</span></td>
-                                <td>${bitgetRateCount}</td>
+                                <td>${calculateDaysDifference(startDate)}</td>
                                 <td class="fee-amount ${bitgetTotalFeeClass}">${formattedBitgetFee}</td>
                                 <td class="fee-amount ${bitgetHighestFeeClass}">${formattedBitgetHighest}</td>
                                 <td class="fee-amount ${bitgetLowestFeeClass}">${formattedBitgetLowest}</td>
@@ -214,6 +214,14 @@ function formatDate(date) {
 function formatFee(value) {
     const sign = value >= 0 ? '+' : '';
     return `${sign}${Number(value.toFixed(5)).toString()}`;
+}
+
+// Helper function to calculate days from start date until today
+function calculateDaysDifference(startDate) {
+    const today = new Date();
+    const differenceInTime = today.getTime() - startDate.getTime();
+    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+    return differenceInDays;
 }
 
 // Toast message function

@@ -2,8 +2,8 @@ name: Funding Rate History Update
 
 on:
   schedule:
-    # Run at 14:00 UTC (22:00 UTC+8)
-    - cron: '0 14 * * *'
+    # Run every 12 minutes
+    - cron: '*/12 * * * *'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:

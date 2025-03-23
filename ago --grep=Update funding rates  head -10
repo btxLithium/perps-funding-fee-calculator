@@ -1,0 +1,175 @@
+[33mcommit c054528f297bb7086c2314826cc4989e74223966[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 21:41:38 2025 +0800
+
+    Update funding_rate_history_update.yml
+
+[33mcommit cc20fd9344e82a038631ef28ec19d7ed95c35aea[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 21:37:22 2025 +0800
+
+    remove all code using proxies
+
+[33mcommit 6055daa48316d13675e9667a2ed32645a2354128[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Mar 23 11:19:09 2025 +0000
+
+    Update funding rates history (2025-03-23)
+
+[33mcommit fb5a2da9cf4b3fba89c0455d74dd92825d9ad4f7[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 19:18:08 2025 +0800
+
+    remove code to use Public proxies
+
+[33mcommit c75f0a2788400b4b665e489e41f94d94ccdf4fe5[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 18:39:20 2025 +0800
+
+    Feat:  多层代理尝试绕过Binance API限制
+
+[33mcommit b821ab4564511420470ab39c4e8af32fa439a895[m
+Merge: c117883 a6e93f9
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 18:26:04 2025 +0800
+
+    Merge branch 'main' of https://github.com/btxLithium/perps-funding-fee-calculator
+
+[33mcommit c1178832fad83384aa47d53d6b7800955c848641[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 18:25:42 2025 +0800
+
+    change runner labels
+
+[33mcommit a6e93f94494db123ac8a7a7e151de5a13b5f326b[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Mar 23 10:04:32 2025 +0000
+
+    Update funding rates history (2025-03-23)
+
+[33mcommit 7d9ad717b2abea630f918f68d60c2947aaea4eb2[m
+Merge: cc30ef6 afd135c
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 18:01:19 2025 +0800
+
+    Merge branch 'main' of https://github.com/btxLithium/perps-funding-fee-calculator
+
+[33mcommit cc30ef62cc9cb063fa65788e47c0cf2a0a8c5eaf[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 18:00:45 2025 +0800
+
+    Fix: try to surpass IP detect by Binance API
+
+[33mcommit afd135cd6cfc698e66b605dd507fb5b02e9f9d7f[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Mar 23 09:49:10 2025 +0000
+
+    Update funding rates history (2025-03-23)
+
+[33mcommit a54cb78a337e75bd33e3b9e075c4ef2b8160979a[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 17:43:26 2025 +0800
+
+    Update README.md
+
+[33mcommit 8f966319670ee63c65bf046b274478216441a294[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 17:38:17 2025 +0800
+
+    Chore: rename github action
+
+[33mcommit 67f6feb0d798431121a2edb09a97547965fea8af[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 17:28:07 2025 +0800
+
+    Feat: add a badge that indicates Workflow Status
+
+[33mcommit 159a1d1190d16cd6441df4b3cb89d50c1f9643cd[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 17:16:38 2025 +0800
+
+    Fix: fix a datatype error in binance update script
+
+[33mcommit 9824fa4921de670a90b3f5b9f4c0e28159cd8507[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 16:54:28 2025 +0800
+
+    Update README.md
+
+[33mcommit bec008ab2fd4ec32caf48b8ad927e7e3029e4762[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 16:43:57 2025 +0800
+
+    Update README.md
+
+[33mcommit c3a7cf99ebddf7586030e662005c128a120a2b93[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 16:35:30 2025 +0800
+
+    Feat: Create github actions config
+
+[33mcommit c2c59385dd2060fa0b7a1c80165c6ec6abe4ce2d[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 16:27:22 2025 +0800
+
+    Doc: add a screenshot of the web app
+
+[33mcommit a5cf15783422370262f853cf7cf3b31772374dfb[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 16:11:24 2025 +0800
+
+    Feat: add scripts that update funding rate data
+
+[33mcommit 357a1b89278393866681571cf93c710433758c92[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 15:25:54 2025 +0800
+
+    Chore: add Start date limitation
+
+[33mcommit 7c9f59ffba3e0ac50dd8338a2b3dbbbec5c4723c[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 15:13:39 2025 +0800
+
+    Chore: improve funding fee data presentation with UTC+8 timestamps
+
+[33mcommit 02e3b6e1751dfb62e1c679e64847888a651e7e76[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 14:27:20 2025 +0800
+
+    UI: change layout
+
+[33mcommit 75c988c1b3c11ec6ac092d5af41631efc4295d8f[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 14:23:36 2025 +0800
+
+    Feat: support position direction options for calculation
+
+[33mcommit f92029b3743186e9333e6af95a7dc9eb0a66d616[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 14:14:12 2025 +0800
+
+    Add: show highest/lowest funding rate with timestamp
+
+[33mcommit c334cd91ef8b1de9cc212f00e7d326aab8f7f874[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 14:01:36 2025 +0800
+
+    Feat: support selecting different cryptocurrencies
+
+[33mcommit 5feee7351d9e77ce8db1199930074d161101bcab[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 13:35:30 2025 +0800
+
+    UI: use Lexand Deca as the primary font
+
+[33mcommit 02254bbe046d51bbc6b6067b808579c4d1237fd0[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 13:22:06 2025 +0800
+
+    UI: redesign interface following Material Design guidelines
+
+[33mcommit 01c244fb8a1704fee454c33e7baca4ab5407e3e3[m
+Author: JH SUI <jhsui@gmx.com>
+Date:   Sun Mar 23 13:08:16 2025 +0800
+
+    Feat: add web interface
