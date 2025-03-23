@@ -29,4 +29,4 @@ if __name__ == "__main__":
         filename = f"data/{coin.lower()}_funding_rates_bitget.json"
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(rates, f, ensure_ascii=False, indent=2)
-        print(f"History funding rates saved to {filename} (from timestamp 1739750400000).")
+        print(f"History funding rates saved to {filename} (from timestamp 1739865600000).")

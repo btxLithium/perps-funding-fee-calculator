@@ -1,6 +1,26 @@
 [
   {
     "symbol": "BTCUSDT",
+    "fundingRate": "0.000009",
+    "settleTime": "1742716800000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingRate": "0.000045",
+    "settleTime": "1742688000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingRate": "0.000074",
+    "settleTime": "1742659200000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingRate": "-0.000011",
+    "settleTime": "1742630400000"
+  },
+  {
+    "symbol": "BTCUSDT",
     "fundingRate": "0.000043",
     "settleTime": "1742601600000"
   },
@@ -478,25 +498,5 @@
     "symbol": "BTCUSDT",
     "fundingRate": "0.000121",
     "settleTime": "1739865600000"
-  },
-  {
-    "symbol": "BTCUSDT",
-    "fundingRate": "0.00011",
-    "settleTime": "1739836800000"
-  },
-  {
-    "symbol": "BTCUSDT",
-    "fundingRate": "0.000025",
-    "settleTime": "1739808000000"
-  },
-  {
-    "symbol": "BTCUSDT",
-    "fundingRate": "0.000077",
-    "settleTime": "1739779200000"
-  },
-  {
-    "symbol": "BTCUSDT",
-    "fundingRate": "0.000072",
-    "settleTime": "1739750400000"
   }
 ]

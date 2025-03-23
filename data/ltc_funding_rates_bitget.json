@@ -2,6 +2,26 @@
   {
     "symbol": "LTCUSDT",
     "fundingRate": "0.0001",
+    "settleTime": "1742716800000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
+    "settleTime": "1742688000000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
+    "settleTime": "1742659200000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
+    "settleTime": "1742630400000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
     "settleTime": "1742601600000"
   },
   {
@@ -478,25 +498,5 @@
     "symbol": "LTCUSDT",
     "fundingRate": "0.000077",
     "settleTime": "1739865600000"
-  },
-  {
-    "symbol": "LTCUSDT",
-    "fundingRate": "0.000073",
-    "settleTime": "1739836800000"
-  },
-  {
-    "symbol": "LTCUSDT",
-    "fundingRate": "0.000079",
-    "settleTime": "1739808000000"
-  },
-  {
-    "symbol": "LTCUSDT",
-    "fundingRate": "0.000054",
-    "settleTime": "1739779200000"
-  },
-  {
-    "symbol": "LTCUSDT",
-    "fundingRate": "0.000029",
-    "settleTime": "1739750400000"
   }
 ]
