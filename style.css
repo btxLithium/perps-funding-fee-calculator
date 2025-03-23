@@ -292,3 +292,14 @@ footer {
         text-align: center;
     }
 }
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 0;
+    /* Allow flex items to shrink below content size */
+}
