@@ -1,14 +1,15 @@
 document.getElementById('calcForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
+    const cryptocurrency = document.getElementById('cryptocurrency').value;
     const startDateInput = document.getElementById('startDate').value;
-    const position = parseFloat(document.getElementById('position').value);
+    const positionValue = parseFloat(document.getElementById('positionValue').value);
     const resultElement = document.getElementById('result');
     const submitButton = this.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
 
-    if (!startDateInput || isNaN(position)) {
-        showToast("Please enter a valid date and position size.");
+    if (!startDateInput || isNaN(positionValue)) {
+        showToast("Please enter a valid date and position value.");
         return;
     }
 
@@ -20,8 +21,8 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
     const startDate = new Date(startDateInput);
     let totalFee = 0;
 
-    // Get the data file from GitHub raw URL, please modify the URL according to your situation
-    const dataUrl = 'https://raw.githubusercontent.com/your-username/your-repo/your-branch/data/ltc_funding_rates.json';
+    // Get the data file based on selected cryptocurrency
+    const dataUrl = `data/${cryptocurrency.toLowerCase()}_funding_rates_binance.json`;
 
     try {
         const response = await fetch(dataUrl);
@@ -37,7 +38,7 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
             const settleTime = new Date(parseInt(item.settleTime));
             if (settleTime >= startDate) {
                 const rate = parseFloat(item.fundingRate);
-                totalFee += position * rate;
+                totalFee += positionValue * rate;
                 rateCount++;
             }
         });
@@ -52,7 +53,8 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
                 <div class="result-header">Calculation Results</div>
                 <div class="result-details">
                     <p><strong>Start Date:</strong> ${formattedDate}</p>
-                    <p><strong>Position Size:</strong> ${position} LTC</p>
+                    <p><strong>Cryptocurrency:</strong> ${cryptocurrency}</p>
+                    <p><strong>Position Value:</strong> ${positionValue} USDT</p>
                     <p><strong>Settlement Count:</strong> ${rateCount}</p>
                     <p class="result-amount"><strong>Total Funding Fee:</strong> ${formattedFee} USDT</p>
                 </div>

@@ -21,13 +21,22 @@
         <main>
             <form id="calcForm">
                 <div class="form-group">
+                    <label for="cryptocurrency">Cryptocurrency:</label>
+                    <select id="cryptocurrency" required>
+                        <option value="BTC">BTC</option>
+                        <option value="ETH">ETH</option>
+                        <option value="LTC">LTC</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="startDate">Start Date:</label>
                     <input type="date" id="startDate" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="position">Position Size (LTC):</label>
-                    <input type="number" id="position" step="0.01" min="0" required>
+                    <label for="positionValue">Position Value (USDT):</label>
+                    <input type="number" id="positionValue" step="0.01" min="0" required>
                 </div>
 
                 <button type="submit"><span class="material-icons">search</span> Calculate</button>
