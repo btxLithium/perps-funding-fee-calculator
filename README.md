@@ -1,26 +1,26 @@
-# bitget-perps-funding-fee-calculator
+# perps-funding-fee-calculator([link](https://btxlithium.github.io/perps-funding-fee-calculator/))
  
 <img src="assets/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
 
 ## Project Description
 
-This simple web app is designed to help traders calculate their funding fee costs or benifits over a specified period on Bitget.
+This web app is designed to help traders calculate their funding fee costs or income over a specified period on Bitget or Binance.
 
 ## Structure
 
 ```
 perps-funding-fee-calculator/
-├── index.html                  
-├── style.css                   
-├── script.js                   # Logic for calculations
-├── update_funding_rates_binance.py  # Script to update Binance funding rates
-├── update_funding_rates_bitget.py   # Script to update Bitget funding rates
-├── assets/                     
-├── data/                       # Historical funding rate data
-└── .github/
-    └── workflows/              # GitHub Actions workflows
-        └── daily_funding_rates_update.yml  # Automated update workflow (runs daily at 22:00 UTC+8)
+├ index.html                  
+├ style.css                   
+├ script.js                   # Logic for calculations
+├ update_funding_rates_binance.py  # Script to update Binance funding rates data
+├ update_funding_rates_bitget.py   # Script to update Bitget funding rates data
+├ assets/                     
+├ data/                       # Historical funding rate data
+└ .github/
+    └ workflows/              # GitHub Actions workflows
+        └ daily_funding_rates_update.yml  # Automated update workflow (runs daily at 22:00 UTC+8)
 ```
 
 NOTE: `fetch_funding_rates_binance.py` and `fetch_funding_rates_bitget.py` are one-time scripts executed to fetch all historical funding rate data since February 18. 
@@ -31,8 +31,6 @@ The funding rate data is automatically updated daily at 22:00 (UTC+8) using GitH
 1. Retrieves the latest funding rates from Binance and Bitget APIs
 2. Adds only new data to the existing JSON files
 3. Commits and pushes the changes back to the repository
-
-You can also manually trigger the update workflow from the "Actions" tab in the GitHub repository.
 
 
 ## Donations
