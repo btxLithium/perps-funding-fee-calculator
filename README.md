@@ -1,11 +1,16 @@
 # Perps Funding Fee Calculator([link](https://btxlithium.github.io/perps-funding-fee-calculator/))
  
+
+![Workflow Status](https://github.com/btxLithium/perps-funding-fee-calculator/actions/workflows/daily_funding_rates_update.yml/badge.svg)
+<!-- LAST_UPDATED -->Last Updated: 2023-01-01 00:00 CST<!-- /LAST_UPDATED -->
+
+
 <img src="assets/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
 
 ## Project Description
 
-This web app is designed to help traders calculate their funding fee costs or income over a specified period on Bitget or Binance.
+This web app is designed to help traders calculate and compare funding fee costs or income over a specified period on Bitget and Binance.
 
 ## Automated Updates
 
