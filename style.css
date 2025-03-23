@@ -1,25 +1,252 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
 
+header {
+    margin-bottom: 30px;
+}
+
 h1 {
-    color: #333;
+    color: #3f51b5;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 .material-icons {
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+main {
+    margin-bottom: 40px;
 }
 
 form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
 label {
-    margin-right: 10px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+    display: block;
 }
 
 input {
-    margin-right: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+button .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+button:disabled {
+    background-color: #9fa8da;
+    cursor: not-allowed;
 }
 
 #result {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.5;
+    min-height: 30px;
+}
+
+/* Loading spinner */
+.spin {
+    animation: spin 1.5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    padding: 20px 0;
+}
+
+.loading .material-icons {
+    margin-right: 10px;
+    color: #3f51b5;
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: #323232;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast .material-icons {
+    margin-right: 12px;
+}
+
+/* Result card styling */
+.result-card {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.result-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.result-details {
+    padding: 5px 0;
+}
+
+.result-details p {
+    margin: 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.result-details p:last-child {
+    border-bottom: none;
+}
+
+.result-amount {
     font-size: 1.2em;
-    color: #007700;
+    color: #3f51b5;
+}
+
+/* Error message styling */
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    color: #d32f2f;
+}
+
+.error-message .material-icons {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.error-details {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .result-header {
+        text-align: center;
+    }
 }

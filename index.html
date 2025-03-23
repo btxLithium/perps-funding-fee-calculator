@@ -3,20 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>资金费率计算器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>资金费率计算器</h1>
-    <form id="calcForm">
-        <label for="startDate">起始日期：</label>
-        <input type="date" id="startDate" required>
-        <label for="position">持仓数量（LTC）：</label>
-        <input type="number" id="position" step="0.01" required>
-        <button type="submit">计算</button>
-    </form>
-    <div id="result"></div>
+    <div class="container">
+        <header>
+            <h1><span class="material-icons">calculate</span> 资金费率计算器</h1>
+        </header>
+
+        <main>
+            <form id="calcForm">
+                <div class="form-group">
+                    <label for="startDate">起始日期：</label>
+                    <input type="date" id="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">持仓数量（LTC）：</label>
+                    <input type="number" id="position" step="0.01" min="0" required>
+                </div>
+
+                <button type="submit"><span class="material-icons">search</span> 计算</button>
+            </form>
+
+            <div id="result"></div>
+        </main>
+
+        <footer>
+            <p>© 2023 资金费率计算器 - 用于计算永续合约资金费率</p>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
