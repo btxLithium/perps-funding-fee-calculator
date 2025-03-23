@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>资金费率计算器</title>
+    <title>Funding Rate Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,29 +15,31 @@
 <body>
     <div class="container">
         <header>
-            <h1><span class="material-icons">calculate</span> 资金费率计算器</h1>
+            <h1><span class="material-icons">calculate</span> Perps Funding Fee Calculator</h1>
         </header>
 
         <main>
             <form id="calcForm">
                 <div class="form-group">
-                    <label for="startDate">起始日期：</label>
+                    <label for="startDate">Start Date:</label>
                     <input type="date" id="startDate" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="position">持仓数量（LTC）：</label>
+                    <label for="position">Position Size (LTC):</label>
                     <input type="number" id="position" step="0.01" min="0" required>
                 </div>
 
-                <button type="submit"><span class="material-icons">search</span> 计算</button>
+                <button type="submit"><span class="material-icons">search</span> Calculate</button>
             </form>
 
             <div id="result"></div>
         </main>
 
         <footer>
-            <p>© 2023 资金费率计算器 - 用于计算永续合约资金费率</p>
+            <p>Github: <a
+                    href="https://github.com/btxLithium/perps-funding-fee-calculator">https://github.com/btxLithium/perps-funding-fee-calculator</a>
+            </p>
         </footer>
     </div>
 

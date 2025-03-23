@@ -8,30 +8,30 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
     const originalButtonText = submitButton.innerHTML;
 
     if (!startDateInput || isNaN(position)) {
-        showToast("请输入有效的日期和持仓数量。");
+        showToast("Please enter a valid date and position size.");
         return;
     }
 
     // Show loading state
-    submitButton.innerHTML = '<span class="material-icons spin">refresh</span> 计算中...';
+    submitButton.innerHTML = '<span class="material-icons spin">refresh</span> Calculating...';
     submitButton.disabled = true;
-    resultElement.innerHTML = '<div class="loading"><span class="material-icons spin">refresh</span> 正在加载数据...</div>';
+    resultElement.innerHTML = '<div class="loading"><span class="material-icons spin">refresh</span> Loading data...</div>';
 
     const startDate = new Date(startDateInput);
     let totalFee = 0;
 
-    // 从 GitHub 上获取数据文件的原始链接，请根据实际情况修改 URL
+    // Get the data file from GitHub raw URL, please modify the URL according to your situation
     const dataUrl = 'https://raw.githubusercontent.com/your-username/your-repo/your-branch/data/ltc_funding_rates.json';
 
     try {
         const response = await fetch(dataUrl);
         if (!response.ok) {
-            throw new Error('服务器响应错误: ' + response.status);
+            throw new Error('Server response error: ' + response.status);
         }
 
         const rates = await response.json();
 
-        // 假设数据是一个数组，每项格式如：{ "settleTime": "时间戳字符串", "fundingRate": "费率字符串", ... }
+        // Assuming the data is an array, each item format: { "settleTime": "timestamp string", "fundingRate": "rate string", ... }
         let rateCount = 0;
         rates.forEach(item => {
             const settleTime = new Date(parseInt(item.settleTime));
@@ -49,21 +49,21 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
         // Success result with material design styling
         resultElement.innerHTML = `
             <div class="result-card">
-                <div class="result-header">计算结果</div>
+                <div class="result-header">Calculation Results</div>
                 <div class="result-details">
-                    <p><strong>起始日期:</strong> ${formattedDate}</p>
-                    <p><strong>持仓数量:</strong> ${position} LTC</p>
-                    <p><strong>结算次数:</strong> ${rateCount} 次</p>
-                    <p class="result-amount"><strong>总计资金费:</strong> ${formattedFee} USDT</p>
+                    <p><strong>Start Date:</strong> ${formattedDate}</p>
+                    <p><strong>Position Size:</strong> ${position} LTC</p>
+                    <p><strong>Settlement Count:</strong> ${rateCount}</p>
+                    <p class="result-amount"><strong>Total Funding Fee:</strong> ${formattedFee} USDT</p>
                 </div>
             </div>
         `;
     } catch (error) {
-        console.error("数据获取失败：", error);
+        console.error("Data fetch failed:", error);
         resultElement.innerHTML = `
             <div class="error-message">
                 <span class="material-icons">error</span>
-                <p>数据加载失败，请稍后重试。</p>
+                <p>Failed to load data, please try again later.</p>
                 <p class="error-details">${error.message}</p>
             </div>
         `;
@@ -76,7 +76,7 @@ document.getElementById('calcForm').addEventListener('submit', async function (e
 
 // Helper function to format date
 function formatDate(date) {
-    return date.toLocaleDateString('zh-CN', {
+    return date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
