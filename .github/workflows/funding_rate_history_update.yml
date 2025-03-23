@@ -1,4 +1,4 @@
-name: Daily Funding Rates Update
+name: Funding Rate History Update
 
 on:
   schedule:
@@ -41,7 +41,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/ README.md
-          git commit -m "Update funding rates data ($(date '+%Y-%m-%d'))" || echo "No changes to commit"
+          git commit -m "Update funding rates history ($(date '+%Y-%m-%d'))" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
