@@ -2,6 +2,21 @@
   {
     "symbol": "LTCUSDT",
     "fundingRate": "0.0001",
+    "settleTime": "1742803200000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
+    "settleTime": "1742774400000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
+    "settleTime": "1742745600000"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "fundingRate": "0.0001",
     "settleTime": "1742716800000"
   },
   {
