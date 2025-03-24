@@ -10,7 +10,9 @@
 
 ## Project Description
 
-This web app is designed to help traders calculate and compare funding fee costs or income over a specified period on Bitget and Binance.
+Funding fee expenses can vary significantly across different cryptocurrency exchanges when trading the same asset using perpetual contracts. This web app is designed to help traders calculate and compare funding fee costs or income over a specified period on Bitget and Binance.
+
+在不同的加密货币交易所交易同一资产的永续合约时，资金费支出可能存在显著差异。这个Web App可以帮助交易者计算并对比 Bitget 和 Binance 在特定时间内的资金费成本或收益。
 
 ## Automated Updates
 
