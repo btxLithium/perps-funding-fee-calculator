@@ -11,16 +11,12 @@ def fetch_recent_funding_rates_binance(symbol, limit=50):
         "limit": limit
     }
     
-    # 添加请求头以绕过地区限制
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
-        'Accept': 'application/json',
-        'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
-        # 使用韩国IP地址段
+        # 使用韩国IP地址段以尽量避免地区限制, 不确定是否有影响
         'X-Forwarded-For': f'175.223.{random.randint(1, 254)}.{random.randint(1, 254)}'
     }
     
-    # 使用添加了头信息的请求
     try:
         response = requests.get(url, params=params, headers=headers, timeout=10)
         print(f"Status Code: {response.status_code}")
@@ -75,7 +71,7 @@ def update_funding_rates(coin, symbol):
     return added_count
 
 if __name__ == "__main__":
-    # 确保data目录存在
+
     os.makedirs("data", exist_ok=True)
     
     symbols = {
