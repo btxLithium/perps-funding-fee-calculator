@@ -1,6 +1,21 @@
 [
   {
     "symbol": "ETHUSDT",
+    "fundingRate": "0.00008",
+    "settleTime": "1743062400000"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "fundingRate": "0.000047",
+    "settleTime": "1743033600000"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "fundingRate": "-0.000023",
+    "settleTime": "1743004800000"
+  },
+  {
+    "symbol": "ETHUSDT",
     "fundingRate": "0.000001",
     "settleTime": "1742976000000"
   },
