@@ -1,6 +1,21 @@
 [
   {
     "symbol": "BTCUSDT",
+    "fundingRate": "0.000092",
+    "settleTime": "1743235200000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingRate": "0.000046",
+    "settleTime": "1743206400000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingRate": "0.000097",
+    "settleTime": "1743177600000"
+  },
+  {
+    "symbol": "BTCUSDT",
     "fundingRate": "0.000005",
     "settleTime": "1743148800000"
   },

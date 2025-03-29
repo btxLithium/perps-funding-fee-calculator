@@ -1,6 +1,6 @@
 # Perps Funding Fee Calculator([Link](https://btxlithium.github.io/perps-funding-fee-calculator/))
 
-GITHUB ACTIONS:   <!-- LAST_UPDATED -->Funding Rate History Last Updated: 2025-03-28T22:17:21+08:00<!-- /LAST_UPDATED -->
+GITHUB ACTIONS:   <!-- LAST_UPDATED -->Funding Rate History Last Updated: 2025-03-29T22:16:05+08:00<!-- /LAST_UPDATED -->
 
 ![Workflow Status](https://github.com/btxLithium/perps-funding-fee-calculator/actions/workflows/funding_rate_history_update.yml/badge.svg)
 
