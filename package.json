@@ -1,0 +1,32 @@
+{
+    "name": "perps-funding-fee-calculator",
+    "version": "1.0.0",
+    "private": true,  
+    "type": "module",  
+    "description": "Calculator for cryptocurrency perpetual swap funding fees",
+    "scripts": {
+        "dev": "vite",  
+        "build": "vite build",  
+        "preview": "vite preview"  
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/btxLithium/perps-funding-fee-calculator.git"
+    },
+    "keywords": [
+        "cryptocurrency",
+        "perpetual",
+        "funding",
+        "calculator"
+    ],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/btxLithium/perps-funding-fee-calculator/issues"
+    },
+    "homepage": "https://github.com/btxLithium/perps-funding-fee-calculator#readme",
+    "devDependencies": {
+        "typescript": "^5.8.2", 
+        "vite": "^6.2.3"
+    }
+}

@@ -35,7 +35,7 @@ jobs:
           # Get current date in ISO 8601 format with UTC+8 timezone
           CURRENT_DATE=$(TZ=Asia/Shanghai date '+%Y-%m-%dT%H:%M:%S+08:00')
           # Replace the line with last updated date in README.md
-          sed -i "s|<!-- LAST_UPDATED -->.*<!-- /LAST_UPDATED -->|<!-- LAST_UPDATED -->Funding Rate History Last Updated: $CURRENT_DATE<!-- /LAST_UPDATED -->|g" README.md
+          sed -i "s|<!-- LAST_UPDATED -->.*<!-- /LAST_UPDATED -->|<!-- LAST_UPDATED -->Funding Rate History Last Updated at $CURRENT_DATE<!-- /LAST_UPDATED -->|g" README.md
 
       - name: Commit and push changes
         run: |

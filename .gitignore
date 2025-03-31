@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Compiled JS (if accidentally committed)
+script.js
+
+# IDE / OS files
+.DS_Store
+*.local
+.env
+.env.*
