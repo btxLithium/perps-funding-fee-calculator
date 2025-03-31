@@ -1,12 +1,11 @@
 # Perps Funding Fee Calculator([Link](https://btxlithium.github.io/perps-funding-fee-calculator/))
 
-GITHUB ACTIONS:   <!-- LAST_UPDATED -->Funding Rate History Last Updated: 2025-03-24T22:18:07+08:00<!-- /LAST_UPDATED -->
+**GITHUB ACTIONS**:   <!-- LAST_UPDATED -->Funding Rate History Last Updated: 2025-03-24T22:18:07+08:00<!-- /LAST_UPDATED -->
 
 ![Workflow Status](https://github.com/btxLithium/perps-funding-fee-calculator/actions/workflows/funding_rate_history_update.yml/badge.svg)
 
 
-<img src="assets/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
-
+<img src="docs/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
 ## Project Description
 
@@ -21,25 +20,58 @@ The funding rate data is automatically updated daily at 22:00 (UTC+8) using GitH
 2. Adds only new data to the existing JSON files
 3. Commits and pushes the changes back to the repository
 
-## Structure
+## Running Locally
+
+To run this project on your local machine:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/btxLithium/perps-funding-fee-calculator.git
+    cd perps-funding-fee-calculator
+    ```
+
+2.  **Install dependencies:**
+    Make sure you have Node.js and npm installed.
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    This command will start the Vite development server and open the app in your default browser.
+    ```bash
+    npm run dev
+    ```
+
+
+
+## Project Structure
 
 ```
-perps-funding-fee-calculator/
-├ index.html                  
-├ style.css                   
-├ script.js                   # Logic for calculations
-├ update_funding_rates_binance.py  # Script to update Binance funding rates data
-├ update_funding_rates_bitget.py   # Script to update Bitget funding rates data
-├ assets/                     
-├ data/                       # Historical funding rate data
-└ .github/
-  └ workflows/              # GitHub Actions workflows
-    └ funding_rate_history_update.yml  # Automated update workflow (runs daily at 22:00 UTC+8)
+./
+├── index.html                 
+├── vite.config.ts             # Vite configuration file
+├── tsconfig.json              # TypeScript compiler configuration
+├── package.json               # Project dependencies and scripts
+├── README.md                  
+├── public/                    # Static assets served directly
+│   ├── assets/                
+│   └── data/                  # Historical funding rate data (JSON)
+│       ├── btc_funding_rates_binance.json
+│       ├── btc_funding_rates_bitget.json
+│       └── ... (other crypto pairs)
+├── src/                   
+│   ├── main.ts                # Main application logic entry point
+│   ├── calculator.ts          # Core fee calculation logic
+│   ├── utils.ts               # Utility functions (DOM, API, formatting, types)
+│   └── style.css            
+├── update_funding_rates_*.py  # Python scripts for daily data updates (run by GitHub Actions)
+├── historical_data_fetchers/  # Python scripts for initial historical data fetching
+│   └── fetch_funding_rates_*.py
+└── .github/
+    └── workflows/             # GitHub Actions workflow definitions
+        └── funding_rate_history_update.yml
 ```
-
-NOTE: `fetch_funding_rates_binance.py` and `fetch_funding_rates_bitget.py` are one-time scripts executed to fetch all historical funding rate data since February 18. 
-
-
+NOTE: Scripts in `historical_data_fetchers` are one-time scripts executed to fetch all historical funding rate data since February 18.
 
 ## Donations
 
