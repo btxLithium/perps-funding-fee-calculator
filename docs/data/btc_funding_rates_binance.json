@@ -1,0 +1,758 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743465600000,
+    "fundingRate": "0.00003961",
+    "markPrice": "82517.67674815"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743436800000,
+    "fundingRate": "0.00001845",
+    "markPrice": "83373.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743408000000,
+    "fundingRate": "0.00006020",
+    "markPrice": "81895.20000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743379200000,
+    "fundingRate": "0.00002643",
+    "markPrice": "82345.30000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743350400000,
+    "fundingRate": "0.00004588",
+    "markPrice": "82699.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743321600000,
+    "fundingRate": "0.00000427",
+    "markPrice": "83037.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743292800000,
+    "fundingRate": "0.00000341",
+    "markPrice": "82608.11504215"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743264000000,
+    "fundingRate": "0.00002530",
+    "markPrice": "82371.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743235200000,
+    "fundingRate": "0.00008214",
+    "markPrice": "83699.76590769"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743206400000,
+    "fundingRate": "0.00005364",
+    "markPrice": "84380.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743177600000,
+    "fundingRate": "0.00008118",
+    "markPrice": "84011.10000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743148800001,
+    "fundingRate": "-0.00000457",
+    "markPrice": "85181.54060741"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743120000001,
+    "fundingRate": "0.00001584",
+    "markPrice": "87191.20000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743091200002,
+    "fundingRate": "-0.00003760",
+    "markPrice": "86931.84454074"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743062400001,
+    "fundingRate": "0.00005512",
+    "markPrice": "87363.20000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743033600001,
+    "fundingRate": "0.00003136",
+    "markPrice": "86873.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1743004800001,
+    "fundingRate": "-0.00003082",
+    "markPrice": "86704.27858519"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742976000000,
+    "fundingRate": "0.00001659",
+    "markPrice": "88106.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742947200000,
+    "fundingRate": "-0.00002990",
+    "markPrice": "87369.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742918400000,
+    "fundingRate": "-0.00003776",
+    "markPrice": "87727.92137778"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742889600000,
+    "fundingRate": "0.00001150",
+    "markPrice": "86404.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742860800001,
+    "fundingRate": "-0.00000247",
+    "markPrice": "87463.30000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742832000000,
+    "fundingRate": "-0.00003422",
+    "markPrice": "88291.95428148"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742803200000,
+    "fundingRate": "0.00005512",
+    "markPrice": "86831.20146667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742774400000,
+    "fundingRate": "0.00002039",
+    "markPrice": "86052.86289630"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742745600000,
+    "fundingRate": "0.00004020",
+    "markPrice": "85153.69642963"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742716800000,
+    "fundingRate": "-0.00000184",
+    "markPrice": "84232.38148148"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742688000000,
+    "fundingRate": "0.00002099",
+    "markPrice": "83804.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742659200000,
+    "fundingRate": "0.00005092",
+    "markPrice": "84073.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742630400004,
+    "fundingRate": "-0.00001770",
+    "markPrice": "84235.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742601600000,
+    "fundingRate": "0.00002836",
+    "markPrice": "84050.30000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742572800000,
+    "fundingRate": "0.00002518",
+    "markPrice": "83525.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742544000000,
+    "fundingRate": "0.00005324",
+    "markPrice": "83892.55460741"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742515200000,
+    "fundingRate": "0.00001615",
+    "markPrice": "84183.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742486400000,
+    "fundingRate": "0.00001086",
+    "markPrice": "84656.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742457600000,
+    "fundingRate": "0.00003790",
+    "markPrice": "85769.99517778"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742428800000,
+    "fundingRate": "0.00001944",
+    "markPrice": "86809.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742400000000,
+    "fundingRate": "0.00005024",
+    "markPrice": "84693.10000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742371200000,
+    "fundingRate": "0.00005961",
+    "markPrice": "83135.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742342400000,
+    "fundingRate": "0.00000200",
+    "markPrice": "82670.47688148"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742313600000,
+    "fundingRate": "0.00003514",
+    "markPrice": "81570.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742284800000,
+    "fundingRate": "0.00002059",
+    "markPrice": "83124.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742256000000,
+    "fundingRate": "0.00000703",
+    "markPrice": "83966.75136398"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742227200000,
+    "fundingRate": "0.00000859",
+    "markPrice": "83499.10000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742198400000,
+    "fundingRate": "0.00008474",
+    "markPrice": "83524.17527094"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742169600000,
+    "fundingRate": "0.00001065",
+    "markPrice": "82541.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742140800000,
+    "fundingRate": "0.00001247",
+    "markPrice": "83280.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742112000000,
+    "fundingRate": "0.00004236",
+    "markPrice": "84242.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742083200000,
+    "fundingRate": "0.00000432",
+    "markPrice": "84302.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742054400000,
+    "fundingRate": "-0.00000321",
+    "markPrice": "84295.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1742025600000,
+    "fundingRate": "-0.00002389",
+    "markPrice": "83799.02800000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741996800000,
+    "fundingRate": "-0.00006035",
+    "markPrice": "83939.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741968000000,
+    "fundingRate": "0.00000357",
+    "markPrice": "84687.30085824"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741939200000,
+    "fundingRate": "0.00005331",
+    "markPrice": "82130.62686590"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741910400000,
+    "fundingRate": "0.00005386",
+    "markPrice": "81085.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741881600000,
+    "fundingRate": "0.00003190",
+    "markPrice": "81016.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741852800000,
+    "fundingRate": "0.00002069",
+    "markPrice": "83118.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741824000000,
+    "fundingRate": "0.00000430",
+    "markPrice": "83640.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741795200001,
+    "fundingRate": "0.00004013",
+    "markPrice": "81703.59471111"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741766400000,
+    "fundingRate": "0.00005815",
+    "markPrice": "82405.10000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741737600000,
+    "fundingRate": "0.00000576",
+    "markPrice": "82896.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741708800001,
+    "fundingRate": "0.00008746",
+    "markPrice": "81190.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741680000000,
+    "fundingRate": "0.00003260",
+    "markPrice": "80395.91420690"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741651200000,
+    "fundingRate": "0.00004705",
+    "markPrice": "78567.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741622400000,
+    "fundingRate": "0.00004037",
+    "markPrice": "79999.21651111"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741593600000,
+    "fundingRate": "0.00001344",
+    "markPrice": "82282.17518519"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741564800000,
+    "fundingRate": "0.00003952",
+    "markPrice": "80688.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741536000000,
+    "fundingRate": "0.00010000",
+    "markPrice": "83040.22277037"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741507200000,
+    "fundingRate": "0.00003218",
+    "markPrice": "85973.77313333"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741478400001,
+    "fundingRate": "-0.00002779",
+    "markPrice": "86184.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741449600001,
+    "fundingRate": "0.00001208",
+    "markPrice": "86360.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741420800001,
+    "fundingRate": "0.00000373",
+    "markPrice": "86159.98070370"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741392000000,
+    "fundingRate": "0.00005328",
+    "markPrice": "86753.80000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741363200000,
+    "fundingRate": "0.00002028",
+    "markPrice": "88417.95212593"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741334400001,
+    "fundingRate": "-0.00001539",
+    "markPrice": "88311.88999259"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741305600000,
+    "fundingRate": "-0.00000612",
+    "markPrice": "89887.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741276800000,
+    "fundingRate": "0.00006818",
+    "markPrice": "90770.91326667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741248000001,
+    "fundingRate": "0.00006413",
+    "markPrice": "91314.75866667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741219200000,
+    "fundingRate": "0.00003538",
+    "markPrice": "90567.40845926"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741190400000,
+    "fundingRate": "0.00005028",
+    "markPrice": "88312.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741161600000,
+    "fundingRate": "0.00002722",
+    "markPrice": "87579.60000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741132800000,
+    "fundingRate": "0.00004113",
+    "markPrice": "87246.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741104000000,
+    "fundingRate": "0.00001306",
+    "markPrice": "82949.73682963"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741075200005,
+    "fundingRate": "-0.00000270",
+    "markPrice": "83159.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741046400001,
+    "fundingRate": "-0.00001526",
+    "markPrice": "86181.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1741017600000,
+    "fundingRate": "0.00005272",
+    "markPrice": "90009.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740988800000,
+    "fundingRate": "0.00000791",
+    "markPrice": "92325.20000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740960000001,
+    "fundingRate": "-0.00005518",
+    "markPrice": "94228.90026667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740931200000,
+    "fundingRate": "-0.00002869",
+    "markPrice": "87376.32577037"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740902400000,
+    "fundingRate": "-0.00002783",
+    "markPrice": "86191.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740873600000,
+    "fundingRate": "-0.00001094",
+    "markPrice": "86017.75225185"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740844800001,
+    "fundingRate": "-0.00000858",
+    "markPrice": "84758.97667407"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740816000000,
+    "fundingRate": "-0.00006108",
+    "markPrice": "84707.63182963"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740787200000,
+    "fundingRate": "-0.00000014",
+    "markPrice": "84300.62248148"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740758400000,
+    "fundingRate": "-0.00000373",
+    "markPrice": "83971.85852874"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740729600000,
+    "fundingRate": "0.00009521",
+    "markPrice": "79174.50011852"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740700800001,
+    "fundingRate": "0.00009444",
+    "markPrice": "84667.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740672000000,
+    "fundingRate": "0.00009433",
+    "markPrice": "85473.85978519"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740643200000,
+    "fundingRate": "-0.00000617",
+    "markPrice": "86227.86960741"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740614400001,
+    "fundingRate": "0.00009305",
+    "markPrice": "84203.99431111"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740585600000,
+    "fundingRate": "0.00010000",
+    "markPrice": "87534.92208148"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740556800000,
+    "fundingRate": "0.00006005",
+    "markPrice": "88688.89924444"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740528000000,
+    "fundingRate": "0.00003521",
+    "markPrice": "88639.10000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740499200000,
+    "fundingRate": "0.00001385",
+    "markPrice": "87188.93212261"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740470400000,
+    "fundingRate": "0.00005245",
+    "markPrice": "89304.14428352"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740441600000,
+    "fundingRate": "0.00010000",
+    "markPrice": "91524.67726667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740412800000,
+    "fundingRate": "0.00002050",
+    "markPrice": "94296.00000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740384000000,
+    "fundingRate": "0.00006881",
+    "markPrice": "95838.02390370"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740355200000,
+    "fundingRate": "-0.00002970",
+    "markPrice": "96218.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740326400000,
+    "fundingRate": "0.00001478",
+    "markPrice": "95392.57762963"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740297600000,
+    "fundingRate": "0.00003140",
+    "markPrice": "96455.97020000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740268800000,
+    "fundingRate": "0.00004112",
+    "markPrice": "96503.38967407"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740240000000,
+    "fundingRate": "0.00002318",
+    "markPrice": "96552.60310370"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740211200000,
+    "fundingRate": "0.00006466",
+    "markPrice": "96241.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740182400000,
+    "fundingRate": "0.00010000",
+    "markPrice": "96131.40247407"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740153600000,
+    "fundingRate": "-0.00000097",
+    "markPrice": "98057.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740124800000,
+    "fundingRate": "0.00002286",
+    "markPrice": "98128.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740096000001,
+    "fundingRate": "0.00000123",
+    "markPrice": "98252.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740067200000,
+    "fundingRate": "0.00007346",
+    "markPrice": "96860.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740038400000,
+    "fundingRate": "0.00003269",
+    "markPrice": "96825.70000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1740009600000,
+    "fundingRate": "0.00002420",
+    "markPrice": "96605.40166667"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1739980800000,
+    "fundingRate": "0.00008960",
+    "markPrice": "95895.50000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1739952000000,
+    "fundingRate": "0.00007779",
+    "markPrice": "95640.40000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1739923200000,
+    "fundingRate": "0.00007007",
+    "markPrice": "95621.90000000"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1739894400000,
+    "fundingRate": "0.00010000",
+    "markPrice": "95510.84027407"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "fundingTime": 1739865600000,
+    "fundingRate": "0.00010000",
+    "markPrice": "95416.39865926"
+  }
+]
