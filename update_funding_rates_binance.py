@@ -59,7 +59,7 @@ def fetch_recent_funding_rates_binance(symbol, limit=50):
 def update_funding_rates(coin, symbol):
     """Update funding rates for a specific coin, adding only new data"""
     # Construct the absolute path to the data file
-    data_dir = os.path.join(project_root, "public", "data")
+    data_dir = os.path.join(project_root, "docs", "data")
     filename = os.path.join(data_dir, f"{coin.lower()}_funding_rates_binance.json")
 
     # Ensure the target directory exists

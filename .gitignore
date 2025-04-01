@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
-dist/
+# data used in dev environment
+public/data
 
 # Compiled JS (if accidentally committed)
 script.js
