@@ -48,6 +48,13 @@ main {
     margin-bottom: 40px;
 }
 
+.explanation {
+    font-size: 12px;
+    color: #b5b5b5;
+    margin-bottom: 20px;
+    line-height: 1.35;
+}
+
 form {
     background-color: white;
     border-radius: 8px;

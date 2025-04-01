@@ -1,8 +1,6 @@
 import './style.css';
 import { calculateFees } from './calculator';
 import {
-    FundingRateItem,
-    FeeData,
     getElementById,
     showToast,
     setResultHTML,
@@ -14,8 +12,8 @@ import {
     formatFee,
     formatTimestampToUTC8,
     calculateDaysDifference,
-    getFeeClass
 } from './utils';
+import { generateResultHTML } from './result';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -58,7 +56,6 @@ async function handleSubmit(e: Event): Promise<void> {
         today.setHours(0, 0, 0, 0);
         const startDay = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
 
-
         if (startDay >= today) {
             showToast("Start date must be before today. Please select a past date.");
             return;
@@ -76,7 +73,7 @@ async function handleSubmit(e: Event): Promise<void> {
         const binanceData = calculateFees(binanceRates, startDate, positionValue, directionMultiplier, true);
         const bitgetData = calculateFees(bitgetRates, startDate, positionValue, directionMultiplier, false);
 
-        // Format results
+        // Format results for display
         const formattedDate = formatDate(startDate);
         const formattedBinanceFee = formatFee(binanceData.totalFee);
         const formattedBitgetFee = formatFee(bitgetData.totalFee);
@@ -93,45 +90,25 @@ async function handleSubmit(e: Event): Promise<void> {
 
         const daysDifference = calculateDaysDifference(startDate);
 
-        // Display results
-        setResultHTML(resultElement, `
-            <div class="result-card">
-                <div class="result-header">Calculation Results</div>
-                <div class="result-details">
-                    <p><strong>Start Date:</strong> ${formattedDate}</p>
-                    <p><strong>Cryptocurrency:</strong> ${cryptocurrency}</p>
-                    <p><strong>Position Value:</strong> ${positionValue} USDT</p>
-                    <p><strong>Position Direction:</strong> ${positionDirection.charAt(0).toUpperCase() + positionDirection.slice(1)}</p>
-                    <p><strong>Calculation Period:</strong> ${daysDifference} days</p>
+        // Prepare data for result display function
+        const resultData = {
+            formattedDate,
+            cryptocurrency,
+            positionValue,
+            positionDirection,
+            daysDifference,
+            binanceData,
+            formattedBinanceFee,
+            formattedBinanceHighest,
+            formattedBinanceLowest,
+            bitgetData,
+            formattedBitgetFee,
+            formattedBitgetHighest,
+            formattedBitgetLowest,
+        };
 
-                    <table class="result-table">
-                        <thead>
-                            <tr>
-                                <th>Exchange</th>
-                                <th>Total Funding Fee (USDT)</th>
-                                <th>Highest Single Fee (Income/Expense)</th>
-                                <th>Lowest Single Fee (Income/Expense)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="exchange-logo"><img src="assets/binance-icon-logo.png" alt="Binance" class="exchange-icon"> Binance</span></td>
-                                <td class="fee-amount ${getFeeClass(binanceData.totalFee)}">${formattedBinanceFee}</td>
-                                <td class="fee-amount ${getFeeClass(binanceData.highestFee)}">${formattedBinanceHighest}</td>
-                                <td class="fee-amount ${getFeeClass(binanceData.lowestFee)}">${formattedBinanceLowest}</td>
-                            </tr>
-                            <tr>
-                                <td><span class="exchange-logo"><img src="assets/bitget-icon-logo.png" alt="Bitget" class="exchange-icon"> Bitget</span></td>
-                                <td class="fee-amount ${getFeeClass(bitgetData.totalFee)}">${formattedBitgetFee}</td>
-                                <td class="fee-amount ${getFeeClass(bitgetData.highestFee)}">${formattedBitgetHighest}</td>
-                                <td class="fee-amount ${getFeeClass(bitgetData.lowestFee)}">${formattedBitgetLowest}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="fee-explanation">Note: Positive fees represent income received, negative fees represent expenses paid.</p>
-                </div>
-            </div>
-        `);
+        const resultHTML = generateResultHTML(resultData);
+        setResultHTML(resultElement, resultHTML);
 
     } catch (error) {
         console.error("Calculation failed:", error);

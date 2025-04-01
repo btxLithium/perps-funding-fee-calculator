@@ -11,7 +11,6 @@
     "isolatedModules": true, // Required by Vite
     "noEmit": true, // Vite handles transpiling, TypeScript is for type checking
  
-    "types": ["vite/client"]  
   },
   "include": ["src"]  
  

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">  <!-- Direct link for simplicity, though import in TS is common -->
+    <link rel="stylesheet" href="/src/style.css"> <!-- Direct link for simplicity, though import in TS is common -->
     <script type="module" src="/src/main.ts"></script> <!-- Correct Vite entry point -->
 </head>
 
@@ -20,6 +20,10 @@
         </header>
 
         <main>
+            <p class="explanation">Funding fee expenses can vary significantly across different exchanges when trading
+                the same asset using perpetual contracts. <br>
+                This web app is designed to calculate and compare funding fee costs or income over a specified period on
+                Bitget and Binance.</p>
             <form id="calcForm">
                 <div class="form-group">
                     <label for="cryptocurrency">Cryptocurrency:</label>
@@ -33,7 +37,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="startDate">Start Date:</label>
-                        <input type="date" id="startDate" required>
+                        <input type="date" id="startDate" min="2025-02-19" required>
                     </div>
 
                     <div class="form-group">
