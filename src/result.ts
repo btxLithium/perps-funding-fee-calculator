@@ -1,4 +1,4 @@
-import { FeeData } from './utils';
+import { FeeData, getFeeClass } from './utils';
 
 // Update the interface to match the actual data structure
 interface ResultDisplayData {
@@ -15,12 +15,6 @@ interface ResultDisplayData {
     formattedBitgetFee: string;
     formattedBitgetHighest: string;
     formattedBitgetLowest: string;
-}
-
-// Function to determine the CSS class based on fee value
-function getFeeClass(fee: number | null): string {
-    if (fee === null) return '';
-    return fee >= 0 ? 'income' : 'expense';
 }
 
 /**

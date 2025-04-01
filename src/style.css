@@ -262,12 +262,10 @@ button:disabled {
 
 .result-table .fee-positive {
     color: #00a651;
-    /* 绿色 */
 }
 
 .result-table .fee-negative {
     color: #e51c23;
-    /* 红色 */
 }
 
 /* Error message styling */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding Rate Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Direct link for simplicity, though import in TS is common --> <!-- Correct Vite entry point -->
+  <script type="module" crossorigin src="/perps-funding-fee-calculator/assets/index-CQz8ptSW.js"></script>
+  <link rel="stylesheet" crossorigin href="/perps-funding-fee-calculator/assets/index-BwjJK7oN.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="material-icons">calculate</span> Perps Funding Fee Calculator</h1>
+            <p class="subtitle">Funding rate data source: Binance and Bitget (from 2025-02-18T16:00:00+08:00)</p>
+        </header>
+
+        <main>
+            <p class="explanation">Funding fee expenses can vary significantly across different exchanges when trading
+                the same asset using perpetual contracts. <br>
+                This web app is designed to calculate and compare funding fee costs or income over a specified period on
+                Bitget and Binance.</p>
+            <form id="calcForm">
+                <div class="form-group">
+                    <label for="cryptocurrency">Cryptocurrency:</label>
+                    <select id="cryptocurrency" required>
+                        <option value="BTC">BTC</option>
+                        <option value="ETH">ETH</option>
+                        <option value="LTC">LTC</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" min="2025-02-19" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionValue">Position Value (USDT):</label>
+                        <input type="number" id="positionValue" step="1" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionDirection">Position Direction:</label>
+                        <select id="positionDirection" required>
+                            <option value="long">Long</option>
+                            <option value="short">Short</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="result"></div>
+        </main>
+
+        <footer>
+            <p>Github: <a
+                    href="https://github.com/btxLithium/perps-funding-fee-calculator">https://github.com/btxLithium/perps-funding-fee-calculator</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -141,9 +141,6 @@ if __name__ == "__main__":
         "BTC": "BTCUSDT",
         "ETH": "ETHUSDT",
         "LTC": "LTCUSDT",
-        # Add more symbols as needed
-        "SOL": "SOLUSDT",
-        "XRP": "XRPUSDT",
     }
 
     success_count = 0

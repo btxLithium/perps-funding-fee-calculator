@@ -5,7 +5,7 @@
 ![Workflow Status](https://github.com/btxLithium/perps-funding-fee-calculator/actions/workflows/funding_rate_history_update.yml/badge.svg)
 
 
-<img src="docs/screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
+<img src="screenshot.png" alt="Funding Fee Calculator Screenshot" width="50%">
 
 ## Project Description
 

@@ -106,7 +106,7 @@ export function formatDate(date: Date): string {
 
 export function formatFee(fee: number | null): string {
     if (fee === null) return 'N/A';
-    return fee.toFixed(6);
+    return parseFloat(fee.toFixed(3)).toString();
 }
 
 export function formatTimestampToUTC8(timestamp: Date | null): string {
